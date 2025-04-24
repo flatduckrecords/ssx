@@ -31,9 +31,9 @@ Files may optionally have a +3DOS header (if so it will be ignored).
 
 <a href="https://www.worldofsam.org/products/screen-modes">SAM screens</a> are saved with palette information (usually 40 bytes) and optionally a series of palette changes to be made at certain screen lines. And hopefully a $FF byte as an end-marker. As mentioned, some files will truncate that down to just 4 bytes for MODE 3, and 16 bytes for MODE 4&mdash;and usually no end-marker.
 
-For our purposes, the palette entries are mapped accross to Next's 9-bit RGB colour space using a lookup table. (I'm grateful to Simon N Goodwin for helping me to interpret the "half bright" bit correctly). The line palette changes are implemented as Copper instructions. (This is not really necessary on Next and in a future version we could remap the bitmap data line-by-line to use all 128 SAM colours with no need for dynamic changes). FLASHing colours are not supported.
+For our purposes, the palette entries are mapped across to Next's 9-bit RGB colour space using a lookup table. (I'm grateful to Simon N Goodwin for helping me to interpret the "half bright" bit correctly). The line palette changes are implemented as Copper instructions. (This is not really necessary on Next and in a future version we could remap the bitmap data line-by-line to use all 128 SAM colours with no need for dynamic changes). FLASHing colours are not supported.
 
-The BORDER area is automatically set to PAPER 0 (typically black by convention, but not always). On SAM the palette changes extend into the BORDER area but in this case it <em>will not</em> be affected by the Copper pallete changes, since that's currently concerned with Layer 2, and the border is part of ULA Layer 0 (and uses a separate palette index anyway) but this could be reorganised. MODE 3 screens don't use the full 640x256 so the remaining space around the edges does give a pseudo-border (potentially with palette stripes too).
+The BORDER area is automatically set to PAPER 0 (typically black by convention, but not always). On SAM the palette changes extend into the BORDER area but in this case it <em>will not</em> be affected by the Copper palette changes, since that's currently concerned with Layer 2, and the border is part of ULA Layer 0 (and uses a separate palette index anyway) but this could be reorganised. MODE 3 screens don't use the full 640x256 so the remaining space around the edges does give a pseudo-border (potentially with palette stripes too).
 
 <img src="https://robertmorrison.me/spectrum/next/samscreen/enceladus.jpeg" width="320" height="479" alt="Enceladus disk magazine advert shown on a flatscreen VGA monitor being driven by a ZX Spectrum Next. In front of the computer is a colour table print-out and a scientific calculator.">
 
@@ -41,7 +41,7 @@ The BORDER area is automatically set to PAPER 0 (typically black by convention, 
 
 Here's a BASIC program that demonstrates the viewer by loading random MODE 4 screens from ZXArt.ee:
 
-<img class=icon src="https://robertmorrison.me/public/files/tap.png">
+<img src="https://robertmorrison.me/public/files/tap.png">
 <a href="bas/zxart.tap">zxart.tap</a> | <a href="bas/zxart.bas">zxart.bas</a> | <a href="bas/zxart.txt">zxart.txt</a>
 
     #program zxart.bas
