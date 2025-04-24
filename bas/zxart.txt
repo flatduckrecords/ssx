@@ -1,0 +1,1 @@
+#program zxart#autostart  10 ;Fetch/display SAM SCREEN$ from the ZXArt.ee API  20 h$="tnfs.robertmorrison.me"  30 u$="/api/zxart/sam4/random.php"  40 f$= "/tmp/zxart.ss4"  50 CLS : PRINT "loading..."  60 .http -h h$ -u u$ -f f$  70 .$ ssx f$  80 PAUSE 0: GO TO %509090 SAVE "zxart.bas" LINE %10
