@@ -3,7 +3,14 @@ SAM Coupé SCREEN$ viewer for ZX Spectrum Next
 
 I've prepared a dot command called <kbd>.SSX</kbd> for viewing SAM <kbd>MODE 3</kbd> and <kbd>MODE 4</kbd> screens using ZX Next's&nbsp;<kbd>LAYER 2</kbd>.
   
-Requires Next core 3.0.6 or later.
+- Requires **Next core 3.0.6** or later.
+- Uses Copper (co-processor) for line palette changes
+- Uses Layer 2 256x192 for SAM "MODE 4"
+- Uses Layer 2 in 640x256 overscan mode for SAM "MODE 3"
+- Uses 9-Bit colour space
+- Uses esxDOS for file access
+- Uses IDEDOS/Plus3DOS APIs for memory allocation
+- Uses dot-command structure and error handling for integration with NextZXOS
 
 To install this command as the NextZXOS file handler for .ss3 .ss4 files, first add it to the <kbd>c:/dot</kbd> directory and then add the following line to your <kbd>c:/nextzxos/browser.cfg</kbd> file:
 
