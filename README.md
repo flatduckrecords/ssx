@@ -35,7 +35,7 @@ For our purposes, the palette entries are mapped across to Next's 9-bit RGB colo
 
 The BORDER colour (Next ULA palette index 16) is set to match the first colour-index of the image.
 
-On SAM, the palette changes extend into the BORDER but in this case it <em>will not</em> be affected by the Copper palette changes. (The Copper's attention is directed to Layer 2, and the border is part of Layer 0). MODE 3 screens, however, use only 512x192 of the full 640x256 so the remaining space around the edges does give a pseudo-border that *is* subject to palette changes.
+On SAM, the palette changes can extend into the BORDER but in this case the border area <em>will not</em> be affected by the Copper palette changes. (The Copper's attention is directed to Layer 2, and the border is part of Layer 0). MODE 3 screens, however, use only 512x192 of the full 640x256 so the remaining space around the edges does give a pseudo-border that *is* subject to palette changes.
 
 <img src="https://robertmorrison.me/spectrum/next/samscreen/enceladus.jpeg" width="320" height="479" alt="Enceladus disk magazine advert shown on a flatscreen VGA monitor being driven by a ZX Spectrum Next. In front of the computer is a colour table print-out and a scientific calculator.">
 
