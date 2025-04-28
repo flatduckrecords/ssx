@@ -462,7 +462,7 @@ checkesx:
 		ld a,(_error)	; check for esxDOS error
 		or a
 		jr z,exit
-		scf				; set Fc to indicate errror
+		scf				; set Fc to indicate error
 exit:	ei
 		ret
 
