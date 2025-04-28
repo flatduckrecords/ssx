@@ -39,7 +39,7 @@ RESOLUTION_Y    equ 256			; Hires height
 		push bc
 		push de
 		push hl					; HL will be modified on return
-		push ix					; if there's am error.
+		push ix					; if there's an error.
 		push iy
 		ex af,af'
 		push af
