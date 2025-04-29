@@ -66,3 +66,14 @@ Here's a BASIC program that demonstrates the viewer by loading random MODE 4 scr
       70 .$ ssx f$
       80 PAUSE 0: GO TO %50
     9090 SAVE "zxart.bas" LINE %10
+
+## Bibliography
+- [Next Tech](https://simon.mooli.org.uk/nextbook/) by Simon N Goodwin
+- [ZX Spectrum Next Assembly Guide](https://github.com/tomaz/zx-next-dev-guide) by Tomaž Kragelj
+- [NextZXOS and esxDOS APIs](https://gitlab.com/thesmog358/tbblue/-/raw/master/docs/nextzxos/NextZXOS_and_esxDOS_APIs.pdf?ref_type=heads) by SpecNext Ltd.
+- SAM [Pixel and Palette Data](https://www.worldofsam.org/products/screen-modes) annotated by Anton Javorček
+
+### Dot-command exemplars
+- [.bmpload](https://gitlab.com/thesmog358/tbblue/-/blob/master/src/asm/BMPLOAD/bmpload.asm?ref_type=heads) by Jim Bagley
+- [.sync](https://github.com/jarikomppa/specnext/blob/master/sync/crt0.s) by Jari Komppa
+- [Dotfile examples](https://github.com/taylorza/zxn-inlineasm-doc/tree/main/Examples) by Chris Taylor 
