@@ -38,7 +38,7 @@ Files may optionally have a +3DOS header (if so it will be ignored).
 
 <a href="https://www.worldofsam.org/products/screen-modes">SAM screens</a> are saved with palette information (usually 40 bytes) and optionally a series of palette changes to be made at certain screen lines. And hopefully a $FF byte as an end-marker. As mentioned, some files will truncate that down to just 4 bytes for MODE 3, and 16 bytes for MODE 4&mdash;and usually no end-marker.
 
-For our purposes, the palette entries are mapped across to Next's 9-bit RGB colour space using a lookup table. (I'm grateful to Simon N Goodwin for helping me to interpret the "half bright" bit correctly). The line palette changes are implemented as Copper instructions. (This is not really necessary on Next and in a future version we could remap the bitmap data line-by-line to use all 128 SAM colours with no need for dynamic changes). FLASHing colours are not supported.
+For our purposes, the palette entries are mapped across to Next's 9-bit RGB colour space using a lookup table. (I'm grateful to Simon N Goodwin for helping me to interpret the "half bright" bit correctly). The line palette changes are implemented as Copper instructions. FLASHing colours are not supported.
 
 The BORDER colour (Next ULA palette index 16) is set to match the first colour-index of the image.
 
@@ -49,6 +49,8 @@ On SAM, the palette changes can extend into the BORDER but in this case the bord
 <h2>BASIC demo</h2>
 
 Here's a BASIC program that demonstrates the viewer by loading random MODE 4 screens from ZXArt.ee:
+
+(Requires [Remy's .HTTP dot-command](https://github.com/remy/next-http)).
 
 <img src="https://robertmorrison.me/public/files/tap.png">
 <a href="bas/zxart.tap">zxart.tap</a> | <a href="bas/zxart.bas">zxart.bas</a> | <a href="bas/zxart.txt">zxart.txt</a>
